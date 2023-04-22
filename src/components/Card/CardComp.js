@@ -6,7 +6,7 @@ function CardComp(props) {
     <Card className="w-100" shadow>
       <Row noGutters>
         <Col md={3}>
-          <Card.Img src="./image.jpg" />
+          <Card.Img src={props.image} />
         </Col>
         <Col md={9}>
           <Card.Body>

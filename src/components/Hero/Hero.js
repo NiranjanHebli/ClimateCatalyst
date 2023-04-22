@@ -1,8 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Container, Typography } from '@material-ui/core';
+import {  Container, Typography } from '@material-ui/core';
 import heroImage from './image.jpg';
 import { useAuth0 } from "@auth0/auth0-react";
+// import Button from '../Button/Button';
+import {Button} from '@material-ui/core';
+import ButtonComp from '../Button/Button';
 
 const useStyles = makeStyles((theme) => ({
   hero: {

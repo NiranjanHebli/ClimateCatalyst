@@ -7,6 +7,7 @@ import CarbonMain from "./containers/CarbonFootprint/CarbonMain";
 // import FooterComp from './components/Footer/FooterComp';
 import Navbar from "./components/Navbar/Navbar";
 import News from "./containers/News/News";
+import Impact from "./containers/Impact/Impact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path ="/" element={<Home/>}/>
         <Route  path="/about" element={<About />} />
+        <Route path="/impact" element={<Impact/>}/>
         <Route  path="/carbon" element={<CarbonMain/>}/>
         <Route path ="/news" element={<News/>}/>
       </Routes>

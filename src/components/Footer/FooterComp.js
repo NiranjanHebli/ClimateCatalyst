@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
+import {Instagram,Facebook,Twitter,LinkedIn} from '@material-ui/icons';
+
 import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -51,8 +53,16 @@ export default function FooterComp() {
       <Typography variant="body2"  align="center">
         <Link className={classes.link} to="/about">About</Link>
         <a className={classes.link} href="#">Contact Us</a>
+
+
         <a className={classes.link} href="#">Privacy Policy</a>
         <a className={classes.link} href="#">Terms of Use</a>
+        {/* <div style={{style:"ffffff"}}>
+        <Instagram/>
+        <Twitter/>
+        <LinkedIn/>
+        <Facebook/>
+        </div> */}
       </Typography>
     </footer>
   );
