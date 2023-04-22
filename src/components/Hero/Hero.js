@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Container, Typography } from '@material-ui/core';
 import heroImage from './image.jpg';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const useStyles = makeStyles((theme) => ({
   hero: {
@@ -36,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
 function Hero() {
   const classes = useStyles();
 
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <div className={classes.hero}>
       <Container maxWidth="md">
@@ -45,7 +48,7 @@ function Hero() {
         <Typography className={classes.subtitle} variant="h2">
           Help protect our planet and create a sustainable future!
         </Typography>
-        <Button className={classes.button} variant="contained" color="secondary">
+        <Button className={classes.button} variant="contained" color="secondary" onClick={() => loginWithRedirect()}>
           Get Involved
         </Button>
       </Container>

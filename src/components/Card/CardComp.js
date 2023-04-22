@@ -1,19 +1,18 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 
-function CardComp() {
+function CardComp(props) {
   return (
-    <Card className="w-100">
+    <Card className="w-100" shadow>
       <Row noGutters>
         <Col md={3}>
           <Card.Img src="./image.jpg" />
         </Col>
         <Col md={9}>
           <Card.Body>
-            <Card.Title>Example Card</Card.Title>
+            <Card.Title>{props.title}</Card.Title>
             <Card.Text>
-              This is an example card with a 25% image and a 75% text description.
-              The card takes 100% width of the screen and is built with React and Bootstrap.
+              {props.text}
             </Card.Text>
           </Card.Body>
         </Col>

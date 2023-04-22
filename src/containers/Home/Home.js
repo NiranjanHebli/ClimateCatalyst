@@ -1,14 +1,15 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
 import FooterComp from "../../components/Footer/FooterComp";
-import CardComp from "../../components/Card/CardComp";
+
+import Crisis from "../Crisis/Crisis";
 
 const Home = () => {
   return (
     <div>
         <div className="my-4"></div>
       <Hero />
-      <CardComp/>
+      <Crisis/>
       <FooterComp />
     
     </div>

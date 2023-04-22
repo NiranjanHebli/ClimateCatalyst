@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#fff8e1',
@@ -49,7 +49,7 @@ export default function FooterComp() {
       </Typography>
 
       <Typography variant="body2"  align="center">
-        <a className={classes.link} href="#">About</a>
+        <Link className={classes.link} to="/about">About</Link>
         <a className={classes.link} href="#">Contact Us</a>
         <a className={classes.link} href="#">Privacy Policy</a>
         <a className={classes.link} href="#">Terms of Use</a>
