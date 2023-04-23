@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import { Typography } from "@material-ui/core";
-import {makeStyles} from "@material-ui/core";
+// import {makeStyles} from "@material-ui/core";
 function CarbonFootprintCalculator() {
   const [electricity, setElectricity] = useState(0);
   const [gas, setGas] = useState(0);
@@ -10,29 +10,37 @@ function CarbonFootprintCalculator() {
   const [flight, setFlight] = useState(0);
   const [meat, setMeat] = useState(0);
   const [carbonFootprint, setCarbonFootprint] = useState(0);
-
-const useStyles = makeStyles((theme) => ({
-
-  title:{
-    fontWeight:'bold',
-  }
-}));
+const[message,setMessage]=useState("");
 
   const calculateCarbonFootprint = () => {
 
     const carbonFootprint = (electricity * 0.00043) + (gas * 0.00053) + (car * 0.00055*1.6) + (publicTransportation * 0.00018*1.6) + (flight * 0.00024*1.6) + (meat * 0.0000025);
     setCarbonFootprint(carbonFootprint);
-
-
+      if (carbonFootprint < 1) {
+        setMessage( "Your  carbonFootprint is very good. Keep up the sustainable lifestyle!");
+      } else if (carbonFootprint >= 1 && carbonFootprint < 5) {
+        setMessage( "Your  carbonFootprint is good. There is still room for improvement, but you're doing well!");
+      } else if (carbonFootprint >= 5 && carbonFootprint < 10) {
+        setMessage( "Your  carbonFootprint is average. Consider making changes to reduce your impact on the environment.");
+      } else if (carbonFootprint >= 10 && carbonFootprint < 20) {
+        setMessage( "Your carbonFootprint is bad. There are many ways you can reduce your impact on the environment.");
+      } else if (carbonFootprint >= 20 && carbonFootprint < 30) {
+        setMessage( "Your  carbonFootprint is worse. Your lifestyle is contributing to climate change. Consider making significant changes.");
+      } else {
+        setMessage( "Your carbonFootprint is horrible. You are contributing to climate change in a significant way. Please make changes to reduce your impact.");
+      }
+    
+    
 
   };
-
+// const classes=useStyles();
   return (
+    
     <React.Fragment>
 <div className="my-4"></div>
     <Card className={{justifyContent:"center",alignItems:"center",display:"flex"}} style={{ width: "500px", margin: "0 auto" }}>
       <div className="my-3"></div>
-      <Typography variant="h5" color="primary" align="center" >Carbon Footprint Calculator</Typography >
+      <Typography variant="h5"  align="center" >Carbon Footprint Calculator</Typography >
       <Card.Body>
         <Form>
           <Form.Group>
@@ -68,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
         <div>
           <h2>Result</h2>
           <p>Your estimated carbon footprint is {carbonFootprint} tonnes of CO2e per year.</p>
+          <p>{message}</p>
           </div>
 
           

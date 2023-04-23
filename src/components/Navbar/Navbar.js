@@ -58,7 +58,7 @@ const Navbar = () => {
                 type="submit"
                 onClick={()=>loginWithRedirect()}
               >
-                Login
+                Join Us
               </button>
             </li>
           )}

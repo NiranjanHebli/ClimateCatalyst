@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(10),
+    paddingBottom: theme.spacing(35),
+    
   },
   textContainer: {
     color: '#FFFFFF',
@@ -29,7 +30,7 @@ function AboutUs() {
               <Typography variant="h2" component="h2">
             About Us
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" style={{marginTop:'2rem'}}>
               Climate Catalyst is a non-profit organization that is committed to promoting sustainable practices for a better future. Our organization believes that climate change is one of the most pressing issues of our time and that everyone has a role to play in addressing it.              </Typography>
               <Typography variant="body1" style={{ marginTop: '2rem' }}>
               We offer education, training, and resources to help individuals and organizations better understand the impacts of climate change and how they can make a difference. Through these efforts, we aim to empower individuals and organizations to take meaningful action towards reducing their carbon footprint.

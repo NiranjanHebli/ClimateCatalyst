@@ -8,20 +8,22 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    margin: "10px",
+    flexDirection:"row",
+    // margin: "10px",
   },
   media: {
-    minWidth: 150,
-    height: 150,
+    minWidth: 50,
+    height:100,
   },
   content: {
-    flex: "1 0 auto",
+    // flex: "1 0 auto",
   },
   title: {
     fontWeight: "bold",
   },
   description: {
     marginTop: "10px",
+    minWidth:100,
   },
 });
 
@@ -32,11 +34,11 @@ const NewsCard = ({ title, description, imageUrl }) => {
     <Card className={classes.root}>
       <CardMedia className={classes.media} image={imageUrl} title={title} />
       <CardContent className={classes.content}>
-        <Typography variant="h5" className={classes.title}>
+        <Typography variant="h5" className={classes.title} noWrap>
           {title}
         </Typography>
-        <Typography variant="body2" className={classes.description}>
-          {description}
+        <Typography variant="body1" className={classes.description } noWrap>
+          <p>{description}</p>
         </Typography>
       </CardContent>
     </Card>

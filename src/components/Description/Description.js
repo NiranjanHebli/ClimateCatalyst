@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `linear-gradient(to right bottom, rgba(10, 30, 64, 0.9), rgba(24, 60, 102, 0.9)), url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(10),
+    paddingBottom: theme.spacing(25),
+    paddingTop:theme.spacing(10),
   },
   textContainer: {
     color: '#FFFFFF',

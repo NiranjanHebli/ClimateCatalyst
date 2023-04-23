@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     textAlign: 'center',
     color: theme.palette.common.white,
+    paddingBottom:theme.spacing(35),
+    paddingTop:theme.spacing(35),
   },
   title: {
     fontSize: '48px',

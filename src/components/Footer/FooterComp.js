@@ -7,11 +7,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#fff8e1',
-    padding: theme.spacing(3),
-    marginTop: theme.spacing(8),
-    [theme.breakpoints.up('sm')]: {
-      marginTop: theme.spacing(12),
-    },
+    padding: theme.spacing(5),
     '& h6': {
       fontSize: '1.2rem',
       fontWeight: 'bold',
@@ -26,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'auto',
   },
   link: {
-    marginRight: theme.spacing(2),
     color: '#ffffff',
     '&:hover': {
       color: '#cccccc',

@@ -1,0 +1,21 @@
+
+.quote-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+.centre{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.wood-texture {
+    background-color: #823800;
+    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood.png");
+    height: 450px;
+}
